@@ -1,0 +1,48 @@
+<app-sem-resultado [visivel]="!comida" mensagem="Produto não encontrado" textoLink="Voltar para a página inicial"></app-sem-resultado>
+<div *ngIf="comida" class="container">
+  <img [src]="comida.imagem" [alt]="comida.nome" data-aos="fade-right" data-aos-duration="300">
+  <div class="details" data-aos="fade-left" data-aos-duration="300">
+    <div class="header">
+      <span class="name">
+        {{ comida.nome }}
+      </span>
+      <span class="favorite {{ comida.favorito ? '' : 'not' }}">
+        ❤
+      </span>
+    </div>
+    <div class="rating">
+      <star-rating
+        [value]="comida.estrelas"
+        [totalstars]="5"
+        checkedcolor="rgb(235, 200, 1)"
+        uncheckedcolor="black"
+        size="30px"
+        [readonly]="true">
+      </star-rating>
+    </div>
+
+    <div class="origins">
+      <span *ngFor="let origem of comida.origens">
+        {{ origem }}
+      </span>
+    </div>
+
+    <div class="tag">
+      <app-categorias [categoriasProduto]="comida.categorias" alinhar="start"></app-categorias>
+    </div>
+
+    <div class="cook-time">
+      <span>
+        Tempo de preparo: cerca de <strong>{{ comida.tempoPreparo }}</strong> minutos
+      </span>
+    </div>
+
+    <div class="price">
+      <span>{{ comida.preco | currency }}</span>
+    </div>
+
+    <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+
+  </div>
+
+</div>

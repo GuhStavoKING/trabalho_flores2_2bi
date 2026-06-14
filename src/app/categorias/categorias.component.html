@@ -1,0 +1,10 @@
+<div *ngIf="categorias" [style.justifyContent]="alinhar" data-aos="fade-up" data-aos-duration="300">
+  <a *ngFor="let categoria of categorias" routerLink="/categoria/{{ categoria.nome }}">
+    {{ categoria.nome }}({{ categoria.quantidade }})
+  </a>
+</div>
+<div *ngIf="categoriasProduto" [style.justifyContent]="alinhar" class="categorias">
+  <a *ngFor="let nome of categoriasProduto" routerLink="/categoria/{{ nome }}">
+    {{ nome }}
+  </a>
+</div>

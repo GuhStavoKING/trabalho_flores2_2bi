@@ -1,0 +1,47 @@
+<app-sem-resultado [visivel]="!carrinho || carrinho.itens.length <= 0" mensagem="Seu carrinho está vazio!" textoLink="Ir para a página inicial"></app-sem-resultado>
+<div *ngIf="carrinho && carrinho.itens.length > 0" class="container">
+  <ul data-aos="fade-right" data-aos-duration="300">
+    <li *ngFor="let item of carrinho.itens">
+      <div>
+        <img [src]="item.comida.imagem" [alt]="item.comida.nome">
+      </div>
+      <div class="nome-produto">
+        <a routerLink="/produto/{{ item.comida.id }}">
+          {{ item.comida.nome }}
+        </a>
+      </div>
+
+      <div>
+        <select #quantidadeSelect (change)="alterarQuantidade(item, quantidadeSelect.value)">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div>
+        {{ item.comida.preco | currency }}
+      </div>
+
+      <div>
+        <button class="botao-remover" (click)="remover(item)">
+          Remover
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="checkout" data-aos="fade-left" data-aos-duration="300">
+    <p>Detalhes da compra 🛒</p>
+    <div>
+      <div class="quantidade-itens">
+        {{ carrinho.itens.length }}
+      </div>
+      <div class="preco-total">
+        {{ carrinho.getPrecoTotal() | currency }}
+      </div>
+    </div>
+  </div>
+</div>

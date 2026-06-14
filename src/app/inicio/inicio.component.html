@@ -1,0 +1,47 @@
+<div class="container-main">
+  <app-busca></app-busca>
+  <app-categorias></app-categorias>
+  <app-sem-resultado [visivel]="!comidas || comidas.length <= 0" mensagem="Nenhum resultado encontrado!" textoLink="Limpar busca"></app-sem-resultado>
+    <ul>
+      <li *ngFor="let comida of comidas" data-aos="fade-up" data-aos-duration="300">
+        <a routerLink="/produto/{{ comida.id }}">
+          <img src="{{ comida.imagem }}">
+          <div class="content">
+            <div class="name">
+            {{ comida.nome }}
+            </div>
+            <span class="favorite {{ comida.favorito ? '' : 'not' }}">
+              ❤
+            </span>
+            <div class="starts">
+              <star-rating
+              [value]="comida.estrelas"
+              [totalstars]="5"
+              checkedcolor="rgb(235, 200, 1)"
+              uncheckedcolor="black"
+              size="20px"
+              [readonly]="true">
+            </star-rating>
+            </div>
+            <div class="product-item-footer">
+              <div class="origins">
+                <span *ngFor="let origem of comida.origens">
+                  {{ origem }}
+                </span>
+              </div>
+              <div class="cook-time">
+                <span>🕒</span>
+                {{ comida.tempoPreparo }}
+              </div>
+            </div>
+            <div class="price">
+              <span>
+                {{ comida.preco | currency }}
+              </span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+</div>
+<app-rodape></app-rodape>

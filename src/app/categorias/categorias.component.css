@@ -1,0 +1,51 @@
+div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 0.5rem;
+}
+
+div a{
+  background-color: #f0f0f0;
+  padding: .3rem 1rem;
+  margin: .2rem .15rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  color: rgb(116, 116, 116);
+  transition: all .4s;
+}
+
+div a:hover{
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  div{
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  div{
+    width: 95%;
+  }
+
+  div a{
+    padding: .1rem .8rem;
+    font-size: 0.9rem;
+  }
+
+  .categorias{
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  div a{
+    font-size: 0.85rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

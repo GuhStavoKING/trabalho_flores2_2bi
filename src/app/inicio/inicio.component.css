@@ -1,0 +1,129 @@
+.container-main{
+  padding: 0 0 3rem 0;
+  margin-bottom: 8rem;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+ul li a{
+  height: auto;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+  transition: all .5s;
+}
+
+ul li a img{
+  width: 100%;
+  transition: all .2s;
+}
+
+li a:hover img{
+  opacity: 0.9;
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.content{
+  padding: .5rem 1rem;
+  position: relative;
+  border: 2px solid whitesmoke;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
+}
+
+.favorite{
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.favorite.not{
+  color: grey;
+}
+
+.starts{
+  margin-bottom: .2rem;
+}
+
+.product-item-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.origins{
+  flex: 9;
+}
+
+.origins span{
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: .7rem;
+  color: grey;
+  margin-right: .3rem;
+  padding: .1rem .5rem;
+}
+
+.cook-time{
+  color: grey;
+  font-size: .8rem;
+  flex: 3;
+  text-align: right;
+}
+
+.price{
+  color: #414141;
+  margin-top: .7rem;
+}
+
+@media (max-width: 768px) {
+  ul{
+    max-width: 95%;
+  }
+
+  .container-main{
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 600px){
+  ul{
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  ul li a{
+    max-width: 100%;
+    margin: 0.5rem;
+  }
+
+  ul li a img{
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  .container-main{
+    margin-bottom: 3rem;
+  }
+}
