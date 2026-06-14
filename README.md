@@ -1,3 +1,4 @@
+```markdown
 # 📘 Trabalho Prático — LancheNet (Angular)
 
 Projeto desenvolvido para a disciplina de **Programação Front-End** do curso de **Análise e Desenvolvimento de Sistemas**, com foco na prática de desenvolvimento web utilizando **Angular**, **TypeScript** e **CSS**.
@@ -101,12 +102,144 @@ A aplicação **LancheNet** possui as seguintes funcionalidades:
  ├── package.json
  ├── tsconfig.json
  └── README.md
-▶️ Como Executar o Projeto1️⃣ Instalar o Node.jsFaça o download e instale o Node.js no site oficial:Node.js OficialApós a instalação, verifique se tudo está funcionando corretamente:Bashnode -v
+
+```
+
+---
+
+# ▶️ Como Executar o Projeto
+
+## 1️⃣ Instalar o Node.js
+
+Faça o download e instale o Node.js no site oficial:
+
+[Node.js Oficial](https://nodejs.org/pt-br)
+
+Após a instalação, verifique se tudo está funcionando corretamente:
+
+```bash
+node -v
 npm -v
-Recomenda-se utilizar a versão 16 ou superior do Node.js.2️⃣ Clonar o RepositórioBashgit clone LINK_DO_REPOSITORIO
-Acesse a pasta do projeto:Bashcd Projeto_WebSiteFood-main
-3️⃣ Instalar as DependênciasNo terminal execute:Bashnpm install
-4️⃣ Executar em Modo de DesenvolvimentoInicie o servidor local do Angular:Bashnpm start
-Acesse no navegador:http://localhost:42005️⃣ Gerar Build de ProduçãoPara compilar o projeto para produção:Bashnpm run build
-Os arquivos compilados serão gerados na pasta dist/.6️⃣ Executar os TestesPara rodar os testes unitários:Bashnpm test
-🗺️ Rotas da AplicaçãoRotaComponenteDescrição/inicioInicioComponentPágina inicial com produtos/busca/:termoInicioComponentBusca por nome/categoria/:nomeInicioComponentFiltro por categoria/produto/:idProdutoComponentDetalhes do produto/carrinhoCarrinhoComponentCarrinho de compras💡 ObservaçõesO projeto foi desenvolvido com Angular 15, seguindo a arquitetura em componentes gerada pelo Angular CLI.A estilização utiliza CSS puro, com layout responsivo para dispositivos móveis e desktop.A lógica de negócio está separada da interface por meio de serviços (ComidaService e CarrinhoService).O locale está configurado para português (pt) e formatação de moeda em Real (BRL).Animações de scroll são aplicadas com a biblioteca AOS (Animate On Scroll).✅ Resultado EsperadoAo executar o projeto, o usuário terá acesso a uma aplicação web com:Cabeçalho com logo LancheNet e link para o carrinhoCampo de busca para filtrar produtosFiltros por categorias (ex.: Lanches, Bebidas, Sobremesas)Cards de produtos com imagem, avaliação, origem e preçoPágina de detalhes com botão para adicionar ao carrinhoCarrinho funcional com controle de quantidade e total da compra📌 Considerações FinaisEste trabalho teve como objetivo reforçar os conceitos fundamentais de desenvolvimento front-end com Angular e TypeScript, além de proporcionar prática na construção de uma aplicação web completa, interativa e responsiva para um cardápio digital da LancheNet.📖 ReferênciasAngular Documentation. Disponível em: https://angular.io/docsMACHADO, R. Angular 11: desenvolvimento web. São Paulo: Novatec, 2021.SOARES, M. Desenvolvimento web com Angular. São Paulo: Casa do Código, 2020.
+
+```
+
+> Recomenda-se utilizar a **versão 16 ou superior** do Node.js.
+
+---
+
+## 2️⃣ Clonar o Repositório
+
+```bash
+git clone LINK_DO_REPOSITORIO
+
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd Projeto_WebSiteFood-main
+
+```
+
+---
+
+## 3️⃣ Instalar as Dependências
+
+No terminal execute:
+
+```bash
+npm install
+
+```
+
+---
+
+## 4️⃣ Executar em Modo de Desenvolvimento
+
+Inicie o servidor local do Angular:
+
+```bash
+npm start
+
+```
+
+Acesse no navegador:
+
+**http://localhost:4200**
+
+---
+
+## 5️⃣ Gerar Build de Produção
+
+Para compilar o projeto para produção:
+
+```bash
+npm run build
+
+```
+
+Os arquivos compilados serão gerados na pasta `dist/`.
+
+---
+
+## 6️⃣ Executar os Testes
+
+Para rodar os testes unitários:
+
+```bash
+npm test
+
+```
+
+---
+
+# 🗺️ Rotas da Aplicação
+
+| Rota | Componente | Descrição |
+| --- | --- | --- |
+| `/inicio` | `InicioComponent` | Página inicial com produtos |
+| `/busca/:termo` | `InicioComponent` | Busca por nome |
+| `/categoria/:nome` | `InicioComponent` | Filtro por categoria |
+| `/produto/:id` | `ProdutoComponent` | Detalhes do produto |
+| `/carrinho` | `CarrinhoComponent` | Carrinho de compras |
+
+---
+
+# 💡 Observações
+
+* O projeto foi desenvolvido com **Angular 15**, seguindo a arquitetura em componentes gerada pelo Angular CLI.
+* A estilização utiliza **CSS puro**, com layout responsivo para dispositivos móveis e desktop.
+* A lógica de negócio está separada da interface por meio de **serviços** (`ComidaService` e `CarrinhoService`).
+* O locale está configurado para **português (pt)** e formatação de moeda em **Real (BRL)**.
+* Animações de scroll são aplicadas com a biblioteca **AOS** (Animate On Scroll).
+
+---
+
+# ✅ Resultado Esperado
+
+Ao executar o projeto, o usuário terá acesso a uma aplicação web com:
+
+* Cabeçalho com logo **LancheNet** e link para o carrinho
+* Campo de busca para filtrar produtos
+* Filtros por categorias (ex.: Lanches, Bebidas, Sobremesas)
+* Cards de produtos com imagem, avaliação, origem e preço
+* Página de detalhes com botão para adicionar ao carrinho
+* Carrinho funcional com controle de quantidade e total da compra
+
+---
+
+# 📌 Considerações Finais
+
+Este trabalho teve como objetivo reforçar os conceitos fundamentais de desenvolvimento **front-end** com **Angular** e **TypeScript**, além de proporcionar prática na construção de uma aplicação web completa, interativa e responsiva para um cardápio digital da **LancheNet**.
+
+---
+
+# 📖 Referências
+
+* Angular Documentation. Disponível em: [https://angular.io/docs](https://angular.io/docs)
+* MACHADO, R. *Angular 11: desenvolvimento web*. São Paulo: Novatec, 2021.
+* SOARES, M. *Desenvolvimento web com Angular*. São Paulo: Casa do Código, 2020.
+
+```
+
+```
